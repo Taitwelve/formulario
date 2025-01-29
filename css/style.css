@@ -9,3 +9,122 @@
     --color-blue: rgb(20, 20,100);
     --margin-base: 20px;
 }
+
+.container {
+    min-height: 100vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .box {
+        width: 50%;
+        height: 90%;
+        color: var(--color-blue);
+        margin-bottom: var(--margin-base);
+
+        h2 {
+            font-size: 6vmin;
+            margin: var(--margin-base);
+        }
+
+        p {
+            width: 90%;
+            font-size: 3vmin;
+            margin: var(--margin-base);
+        }
+
+        img {
+           width: 45%;
+        }
+
+        .form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+
+            .box-form-item {
+                padding: 0 10px;
+                height: 90px;
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                label {
+                    font-size: 18px;
+                    margin-bottom: -3px;
+
+                    &:not(.radio, .select){
+                        margin-bottom: -18px;
+                    }
+                }
+
+                input,
+                select {
+                    width: 100%;
+                    height: 40px;
+                    padding-left: 40px;
+                    font-size: 18px;
+
+                    &:focus {
+                        outline-color: #20046e;
+                    }
+                }
+
+                select {
+                    padding-left: 10px;
+                    margin-bottom: -18px;
+                }
+
+                .icon {
+                    position: relative;
+                    top: 28px;
+                    left: 15px;
+                }
+
+                .box-form-radio {
+                    display: flex;
+                    flex-direction: row; 
+                    gap: 15px;
+
+                    .radio {
+                        margin-top: 5px;
+                        display: flex;
+                        align-items: center;
+                        gap: 7px;
+                    }
+                }
+            }
+
+            .box-form-button {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: var(--margin-base);
+
+                button {
+                    margin-top: 20px;
+                    width: 200px;
+                    height: 50px;
+                    background-color: var(--color-blue);
+                    color: #fff;
+                    border-radius: 5px;
+                    font-size: 1.3rem;
+                    border: 0;
+
+                    .arrow {
+                        color: #6c98e5;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
